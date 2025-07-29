@@ -22,9 +22,9 @@ for (i = 0; i < n; i++) {
     printf("Employee ID: ");
     scanf("%d", &employees[i].emp_id);
     printf("Name: ");
-    scanf(" %[^\n]", employees[i].name); // Read string with spaces
+    scanf(" %[^\n]", employees[i].name);
     printf("Designation: ");
-    scanf(" %[^\n]", employees[i].designation); // Read string with spaces
+    scanf(" %[^\n]", employees[i].designation);
     printf("Basic Salary: ");
     scanf("%f", &employees[i].basic_salary);
     printf("HRA %: ");

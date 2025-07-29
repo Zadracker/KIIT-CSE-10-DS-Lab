@@ -25,24 +25,19 @@ int main() {
     printf("Enter the number of elements in the array: ");
     scanf("%d", &n);
 
-    // Dynamic memory allocation for the array
     int *arr = (int *)malloc(n * sizeof(int));
     if (arr == NULL) {
         printf("Memory allocation failed!\n");
         return 1;
     }
 
-    // Input elements into the array
     printf("Enter %d elements:\n", n);
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-
-    // Calculate the sum of prime elements
     int sum = sum_of_primes(arr, n);
     printf("Sum of prime elements: %d\n", sum);
 
-    // De-allocate the memory
     free(arr);
     
     return 0;

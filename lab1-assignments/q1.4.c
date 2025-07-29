@@ -13,14 +13,12 @@ int main() {
     Complex c1, c2, sum;
     int choice;
 
-    // Input complex numbers
     printf("Enter complex number 1 (real and imaginary parts): ");
     scanf("%d %d", &c1.real, &c1.img);
     printf("Enter complex number 2 (real and imaginary parts): ");
     scanf("%d %d", &c2.real, &c2.img);
 
     do {
-        // Display menu
         printf("\nMENU\n");
         printf("1. Addition\n");
         printf("2. Multiplication\n");
@@ -29,18 +27,18 @@ int main() {
         scanf("%d", &choice);
 
         switch (choice) {
-            case 1: // Addition
+            case 1:
                 sum.real = c1.real + c2.real;
                 sum.img = c1.img + c2.img;
                 printf("Sum = %d + %di\n", sum.real, sum.img);
                 break;
 
-            case 2: // Multiplication
+            case 2:
                 sum.real = (c1.real * c2.real) - (c1.img * c2.img);
                 sum.img = (c1.real * c2.img) + (c1.img * c2.real);
                 printf("Product = %d + %di\n", sum.real, sum.img);
                 break;
-            case 3: // Exit
+            case 3:
                 printf("Exiting the program.\n");
                 return 0;
                 break;    
@@ -52,6 +50,8 @@ int main() {
     return 0;
 }
 
+
+//Output
 /*
 
 Enter complex number 1 (real and imaginary parts): 2 5
