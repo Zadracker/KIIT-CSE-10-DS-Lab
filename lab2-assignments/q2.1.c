@@ -104,7 +104,7 @@ int main() {
                 scanf("%d", &element);
                 position = linear_search(arr, n, element);
                 if (position != -1) {
-                    printf("Element found at index %d\n\n", position);
+                    printf("Element found at index: %d\n\n", position);
                 } else {
                     printf("Element not found\n\n");
                 }
@@ -165,8 +165,8 @@ Element deleted
 5. Exit
 Enter option:3
 Element to search: 3
-Element found at index 2
-
+Element found at index: 2
+    
 ***MENU***
 1. Insert
 2. Delete

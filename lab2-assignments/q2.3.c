@@ -27,9 +27,11 @@ int main() {
     }
 
     printf("Sparse matrix in 3-tuple format:\n");
-    printf("%d   %d   %d\n", rows, cols, nonzero_count);
+    printf("rows\tcols\tnonzero_count\n");
+    printf("%d\t%d\t%d\n", rows, cols, nonzero_count);
+    printf("\n");
     for (int i = 0; i < nonzero_count; i++) {
-        printf("%d   %d   %d\n", tuple[i][0], tuple[i][1], tuple[i][2]);
+        printf("%d\t%d\t%d\n", tuple[i][0], tuple[i][1], tuple[i][2]);
     }
     return 0;
 }
@@ -37,15 +39,17 @@ int main() {
 //Output
 /*
 
-Enter size of the sparse matrix: 4 5                                          
+Enter size of the sparse matrix: 4 5
 Enter elements of sparse matrix:
 0 0 33 0 0 0 17 0 0 0 0 0 0 46 0 0 0 0 0 51
 Sparse matrix in 3-tuple format:
-4   5   4
-0   2   33
-1   1   17
-2   3   46
-3   4   51
+rows    cols    nonzero_count
+4       5       4
+
+0       2       33
+1       1       17
+2       3       46
+3       4       51
 
 
 */
