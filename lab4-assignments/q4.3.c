@@ -1,3 +1,8 @@
+/*
+4.3 Write a program to represent the polynomial equation of single variable using single linked list and perform 
+the addition of two polynomial equations.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -12,7 +12,7 @@ iv. Traverse the linked list
 
 typedef struct  Node {
     int data;
-    struct Node* next;
+    Node* next;
 }Node;
 
 Node* head = NULL;
@@ -24,7 +24,7 @@ void createList(int n) {
     head = (Node*)malloc(sizeof(Node));
     if (head == NULL) {
         printf("Memory allocation failed.\n");
-        return;
+        return 1;
     }
 
     printf("Enter data for node 1: ");
