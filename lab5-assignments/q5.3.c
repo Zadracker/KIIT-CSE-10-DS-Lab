@@ -71,3 +71,17 @@ int main() {
 
     return 0;
 }
+
+//Output
+/*
+Enter size of the sparse matrix: 4 5
+Enter elements of sparse matrix:
+0 0 33 0 0 0 17 0 0 0 0 0 0 46 0 0 0 0 0 51
+
+sparse matrix in 3-tuple format
+4   5   4
+0   2   33
+1   1   17
+2   3   46
+3   4   51
+*/

@@ -5,12 +5,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node {
+typedef struct Node {
     int data;
     struct Node* next;
-};
+}Node;
 
-struct Node* head = NULL;
+Node* head = NULL;
 
 void createCircularList(int n) {
     if (n <= 0) {
@@ -18,13 +18,13 @@ void createCircularList(int n) {
         return;
     }
 
-    struct Node* newNode;
-    struct Node* temp;
+    Node* newNode;
+    Node* temp;
     int data;
 
     printf("Enter data for node 1: ");
     scanf("%d", &data);
-    head = (struct Node*)malloc(sizeof(struct Node));
+    head = (Node*)malloc(sizeof(Node));
     if (head == NULL) {
         printf("Memory allocation failed!\n");
         exit(1);
@@ -37,7 +37,7 @@ void createCircularList(int n) {
         printf("Enter data for node %d: ", i);
         scanf("%d", &data);
         
-        newNode = (struct Node*)malloc(sizeof(struct Node));
+        newNode = (Node*)malloc(sizeof(Node));
         if (newNode == NULL) {
             printf("Memory allocation failed!\n");
             exit(1);
@@ -57,7 +57,7 @@ void displayList() {
         return;
     }
 
-    struct Node* current = head;
+    Node* current = head;
     printf("Elements of the circular linked list: ");
     
     do {
@@ -78,3 +78,13 @@ int main() {
     
     return 0;
 }
+
+//Output:
+/*
+Enter the number of nodes to create: 3
+Enter data for node 1: 10
+Enter data for node 2: 20
+Enter data for node 3: 30
+Circular linked list with 3 nodes created successfully.
+Elements of the circular linked list: 10 -> 20 -> 30 -> ... (back to start)
+*/

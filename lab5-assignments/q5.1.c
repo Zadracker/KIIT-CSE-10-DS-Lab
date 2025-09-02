@@ -157,3 +157,50 @@ int main() {
     }
     return 0;
 }
+
+//Output:
+/*
+*** Double Linked List Operations ***
+1. Insert an element at a specific position
+2. Delete an element from a specific position
+3. Traverse the list
+4. Exit
+Enter your choice: 1
+Enter data to insert: 10
+Enter position to insert at: 1
+Inserted 10 at position 1
+
+*** Double Linked List Operations ***
+1. Insert an element at a specific position
+2. Delete an element from a specific position
+3. Traverse the list
+4. Exit
+Enter your choice: 1
+Enter data to insert: 20
+Enter position to insert at: 2
+Inserted 20 at position 2
+
+*** Double Linked List Operations ***
+1. Insert an element at a specific position
+2. Delete an element from a specific position
+3. Traverse the list
+4. Exit
+Enter your choice: 2
+Enter position to delete from: 1
+Deleted 10 from position 1
+
+*** Double Linked List Operations ***
+1. Insert an element at a specific position
+2. Delete an element from a specific position
+3. Traverse the list
+4. Exit
+Enter your choice: 3
+Double Linked List: 20 <-> NULL
+
+*** Double Linked List Operations ***
+1. Insert an element at a specific position
+2. Delete an element from a specific position
+3. Traverse the list
+4. Exit
+Enter your choice: 4
+*/
