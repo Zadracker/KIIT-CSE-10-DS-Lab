@@ -106,3 +106,95 @@ int main() {
     }
     return 0;
 }
+
+/*
+
+Output->
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Check if Full
+6. Exit
+Enter your choice: 4
+
+Queue is Empty
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Check if Full
+6. Exit
+Enter your choice: 5
+
+Queue is not Full
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Check if Full
+6. Exit
+Enter your choice: 1
+Enter value to enqueue: 1
+1 enqueued to queue
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Check if Full
+6. Exit
+Enter your choice: 1
+Enter value to enqueue: 2
+2 enqueued to queue
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Check if Full
+6. Exit
+Enter your choice: 1
+Enter value to enqueue: 3
+3 enqueued to queue
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Check if Full
+6. Exit
+Enter your choice: 2
+1 dequeued from queue
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Check if Full
+6. Exit
+Enter your choice: 3
+
+Queue elements: 2 3
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Check if Full
+6. Exit
+Enter your choice: 6
+
+Exiting...
+*/

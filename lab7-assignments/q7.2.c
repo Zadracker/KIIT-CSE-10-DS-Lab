@@ -2,63 +2,69 @@
 7.2 Write a menu driven program to implement linear queue operations such as Enqueue, Dequeue,
 IsEmpty, Traverse using single linked list.
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node {
+typedef struct Node {
     int data;
     struct Node* next;
-};
+} Node;
 
-struct Node* front = NULL;
-struct Node* rear = NULL;
+typedef struct {
+    Node* front;
+    Node* rear;
+} Queue;
 
-int isEmpty() {
-    return (front == NULL);
+void initQueue(Queue* q) {
+    q->front = q->rear = NULL;
 }
 
-void enqueue(int value) {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    if (newNode == NULL) {
+int isEmpty(Queue* q) {
+    return (q->front == NULL);
+}
+
+void enqueue(Queue* q, int value) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    if (!newNode) {
         printf("\nMemory allocation failed! Cannot enqueue %d\n", value);
         return;
     }
     newNode->data = value;
     newNode->next = NULL;
 
-    if (rear == NULL) {
-        front = rear = newNode;
+    if (q->rear == NULL) {
+        q->front = q->rear = newNode;
     } else {
-        rear->next = newNode;
-        rear = newNode;
+        q->rear->next = newNode;
+        q->rear = newNode;
     }
     printf("%d enqueued to queue\n", value);
 }
 
-void dequeue() {
-    if (isEmpty()) {
-        printf("\nQueue Underflow! Cannot dequeue\n");
+void dequeue(Queue* q) {
+    if (isEmpty(q)) {
+        printf("\nQueue Underflow!\n");
         return;
     }
-    struct Node* temp = front;
-    printf("%d dequeued from queue\n", front->data);
-    front = front->next;
 
-    if (front == NULL) {
-        rear = NULL;
-    }
+    Node* temp = q->front;
+    printf("%d dequeued from queue\n", temp->data);
+    q->front = q->front->next;
+
+    if (q->front == NULL)
+        q->rear = NULL;
+
     free(temp);
 }
 
-void traverse() {
-    if (isEmpty()) {
+void traverse(Queue* q) {
+    if (isEmpty(q)) {
         printf("\nQueue is empty\n");
         return;
     }
     printf("\nQueue elements: ");
-    struct Node* temp = front;
-    while (temp != NULL) {
+    Node* temp = q->front;
+    while (temp) {
         printf("%d ", temp->data);
         temp = temp->next;
     }
@@ -66,6 +72,9 @@ void traverse() {
 }
 
 int main() {
+    Queue q;
+    initQueue(&q);
+
     int choice, value;
 
     while (1) {
@@ -82,32 +91,83 @@ int main() {
             case 1:
                 printf("Enter value to enqueue: ");
                 scanf("%d", &value);
-                enqueue(value);
+                enqueue(&q, value);
                 break;
 
             case 2:
-                dequeue();
+                dequeue(&q);
                 break;
 
             case 3:
-                traverse();
+                traverse(&q);
                 break;
 
             case 4:
-                if (isEmpty())
-                    printf("\nQueue is Empty\n");
-                else
-                    printf("\nQueue is not Empty\n");
+                printf(isEmpty(&q) ? "\nQueue is Empty\n" : "\nQueue is not Empty\n");
                 break;
 
             case 5:
                 printf("\nExiting...\n");
                 exit(0);
 
-            default:
+            default:    
                 printf("\nInvalid choice! Try again.\n");
         }
     }
 
     return 0;
 }
+/*
+
+Output->
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Exit
+Enter your choice: 4
+
+Queue is Empty
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Exit
+Enter your choice: 1
+Enter value to enqueue: 1
+1 enqueued to queue
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Exit
+Enter your choice: 1
+Enter value to enqueue: 2
+2 enqueued to queue
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Exit
+Enter your choice: 3
+
+Queue elements: 1 2
+
+--- Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check if Empty
+5. Exit
+Enter your choice: 5
+
+Exiting...
+*/

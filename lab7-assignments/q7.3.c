@@ -99,3 +99,133 @@ int main() {
     }
     return 0;
 }
+
+/*
+Output->
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 1
+Enter value to enqueue: 10
+10 inserted into queue.
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 1
+Enter value to enqueue: 20
+20 inserted into queue.
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 1
+Enter value to enqueue: 30
+30 inserted into queue.
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 3
+Queue elements: 10 20 30 
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 2
+10 removed from queue.
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 3
+Queue elements: 20 30 
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 1
+Enter value to enqueue: 40
+40 inserted into queue.
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 1
+Enter value to enqueue: 50
+50 inserted into queue.
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 1
+Enter value to enqueue: 60
+Queue is FULL! Cannot insert 60
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 5
+Queue is FULL.
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 3
+Queue elements: 20 30 40 50 
+
+--- Circular Queue Menu ---
+1. Enqueue
+2. Dequeue
+3. Traverse
+4. Check Empty
+5. Check Full
+6. Exit
+Enter choice: 6
+
+*/
