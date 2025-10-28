@@ -106,7 +106,6 @@ Node* deleteNode(Node* root, int key) {
     return root;
 }
 
-/* --- MAIN MENU --- */
 int main() {
     Node* root = NULL;
     int choice, data, key;
